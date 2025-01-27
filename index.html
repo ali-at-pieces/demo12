@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Facts Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #fact {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fun Facts Generator</h1>
+    <button onclick="generateFact()">Generate a Fun Fact</button>
+    <div id="fact"></div>
+
+    <script>
+        const facts = [
+            "I love hiking and have traveled to five national parks.",
+            "I am an avid reader and read around 20 books per year.",
+            "I once baked a 3-tiered cake for a family gathering!",
+            "I speak three languages fluently.",
+            "I'm learning to play the guitar in my free time."
+        ];
+
+        function generateFact() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById('fact').innerText = facts[randomIndex];
+        }
+    </script>
+</body>
+</html>
